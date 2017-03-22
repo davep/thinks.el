@@ -272,4 +272,4 @@ If not, query for text to insert in bubble."
 
 (provide 'thinks)
 
-;;; thinks.el ends here.
+;;; thinks.el ends here
