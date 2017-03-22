@@ -51,5 +51,5 @@ turn off this behaviour.
 
 The latest thinks.el is always available from:
 
-  <URL:https://github.com/davep/thinks.el>
+https://github.com/davep/thinks.el
 
