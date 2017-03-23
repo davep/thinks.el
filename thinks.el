@@ -3,7 +3,7 @@
 
 ;; Author: Dave Pearson <davep@davep.org>
 ;; Version: 1.9
-;; Keywords: quoting
+;; Keywords: convenience, quoting
 ;; URL: https://github.com/davep/thinks.el
 
 ;; thinks.el is free software distributed under the terms of the GNU General
