@@ -217,10 +217,10 @@ the text to be filled for you."
     (save-excursion
       (delete-region start end)
       (setf (point) start)
-      (insert (flet ((bolp-string (n)
-                       (save-excursion
-                         (setf (point) n)
-                         (if (bolp) "" "\n"))))
+      (insert (cl-flet ((bolp-string (n)
+                          (save-excursion
+                            (setf (point) n)
+                            (if (bolp) "" "\n"))))
                 (concat (bolp-string start)
                         (thinks-bubble-wrap text current-prefix-arg)
                         (bolp-string end)))))))
