@@ -5,6 +5,7 @@
 ;; Version: 1.9
 ;; Keywords: convenience, quoting
 ;; URL: https://github.com/davep/thinks.el
+;; Package-Requires: ((cl-lib "0.5"))
 
 ;; thinks.el is free software distributed under the terms of the GNU General
 ;; Public Licence, version 2 or (at your option) any later version. For
@@ -74,7 +75,7 @@
 ;; Things we need:
 
 (eval-when-compile
-  (require 'cl))
+  (require 'cl-lib))
 
 ;; Attempt to handle older/other emacs.
 
