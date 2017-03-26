@@ -1,3 +1,4 @@
+[![MELPA Stable](https://stable.melpa.org/packages/thinks-badge.svg)](https://stable.melpa.org/#/thinks)
 [![MELPA](https://melpa.org/packages/thinks-badge.svg)](https://melpa.org/#/thinks)
 
 `thinks.el` is a little bit of silliness inspired by the think bubbles you
