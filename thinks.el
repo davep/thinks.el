@@ -183,10 +183,10 @@ Note that the extra silliness only kicks in when `thinks-from' is set to
       (when (eq thinks-from 'bottom-diagonal)
         (unless (bolp)
           (insert "\n"))
-        (loop for n downfrom (- (length thinks-bubbles) 2) to (if extra-silly 2 0) by 2
-              do (insert (make-string n 32)
-                         (substring thinks-bubbles n (1+ n))
-                         "\n")))
+        (cl-loop for n downfrom (- (length thinks-bubbles) 2) to (if extra-silly 2 0) by 2
+           do (insert (make-string n 32)
+                      (substring thinks-bubbles n (1+ n))
+                      "\n")))
       (when extra-silly
         (setf (point) (point-max))
         (unless (bolp)
