@@ -2,7 +2,7 @@
 ;; Copyright 2000-2017 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
-;; Version: 1.10
+;; Version: 1.11
 ;; Keywords: convenience, quoting
 ;; URL: https://github.com/davep/thinks.el
 ;; Package-Requires: ((cl-lib "0.5"))
