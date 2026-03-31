@@ -27,8 +27,7 @@
 ;;
 ;; . o O ( insert text that looks like this )
 ;;
-;; into a buffer. This could possibly be handy for use in email and usenet
-;; postings.
+;; into a buffer.
 ;;
 ;; Note that the code can handle multiple lines
 ;;
