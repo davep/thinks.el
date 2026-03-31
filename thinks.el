@@ -5,7 +5,7 @@
 ;; Version: 1.12
 ;; Keywords: convenience, quoting
 ;; URL: https://github.com/davep/thinks.el
-;; Package-Requires: ((cl-lib "0.5"))
+;; Package-Requires: ((emacs "24.1") (cl-lib "0.5"))
 
 ;; This program is free software: you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by the
