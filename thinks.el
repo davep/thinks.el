@@ -1,8 +1,8 @@
 ;;; thinks.el --- Insert text in a think bubble  -*- lexical-binding: t; -*-
-;; Copyright 2000-2017 by Dave Pearson <davep@davep.org>
+;; Copyright 2000-2026 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
-;; Version: 1.12
+;; Version: 1.13
 ;; Keywords: convenience, quoting
 ;; URL: https://github.com/davep/thinks.el
 ;; Package-Requires: ((emacs "24.1") (cl-lib "0.5"))
