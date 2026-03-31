@@ -145,7 +145,7 @@ Note that the extra silliness only kicks in when `thinks-from' is set to
                                              (length thinks-main-bubble-left)
                                              (length thinks-main-bubble-right)))))
           (fill-region (point-min) (point-max))))
-      (setf (point) (point-min))
+      (goto-char (point-min))
       (let ((max-line-width 0))
         (save-excursion
           (while (not (eobp))
@@ -175,7 +175,7 @@ Note that the extra silliness only kicks in when `thinks-from' is set to
                                             (length thinks-main-bubble-left))))
                                    32))
               (insert thinks-main-bubble-right))
-            (incf current-line)
+            (cl-incf current-line)
             (forward-line))))
       (when (eq thinks-from 'bottom-diagonal)
         (unless (bolp)
@@ -185,7 +185,7 @@ Note that the extra silliness only kicks in when `thinks-from' is set to
                       (substring thinks-bubbles n (1+ n))
                       "\n")))
       (when extra-silly
-        (setf (point) (point-max))
+        (goto-char (point-max))
         (unless (bolp)
           (insert "\n"))
         (insert " o\n/|\\\n |\n/ \\\n"))
@@ -213,10 +213,10 @@ the text to be filled for you."
   (let ((text (buffer-substring start end)))
     (save-excursion
       (delete-region start end)
-      (setf (point) start)
+      (goto-char start)
       (insert (cl-flet ((bolp-string (n)
                           (save-excursion
-                            (setf (point) n)
+                            (goto-char n)
                             (if (bolp) "" "\n"))))
                 (concat (bolp-string start)
                         (thinks-bubble-wrap text current-prefix-arg)
