@@ -1,11 +1,11 @@
-;;; thinks.el --- Insert text in a think bubble.
-;; Copyright 2000-2017 by Dave Pearson <davep@davep.org>
+;;; thinks.el --- Insert text in a think bubble  -*- lexical-binding: t; -*-
+;; Copyright 2000-2026 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
-;; Version: 1.12
+;; Version: 1.13
 ;; Keywords: convenience, quoting
 ;; URL: https://github.com/davep/thinks.el
-;; Package-Requires: ((cl-lib "0.5"))
+;; Package-Requires: ((emacs "24.1") (cl-lib "0.5"))
 
 ;; This program is free software: you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by the
@@ -27,8 +27,7 @@
 ;;
 ;; . o O ( insert text that looks like this )
 ;;
-;; into a buffer. This could possibly be handy for use in email and usenet
-;; postings.
+;; into a buffer.
 ;;
 ;; Note that the code can handle multiple lines
 ;;
@@ -145,7 +144,7 @@ Note that the extra silliness only kicks in when `thinks-from' is set to
                                              (length thinks-main-bubble-left)
                                              (length thinks-main-bubble-right)))))
           (fill-region (point-min) (point-max))))
-      (setf (point) (point-min))
+      (goto-char (point-min))
       (let ((max-line-width 0))
         (save-excursion
           (while (not (eobp))
@@ -175,7 +174,7 @@ Note that the extra silliness only kicks in when `thinks-from' is set to
                                             (length thinks-main-bubble-left))))
                                    32))
               (insert thinks-main-bubble-right))
-            (incf current-line)
+            (cl-incf current-line)
             (forward-line))))
       (when (eq thinks-from 'bottom-diagonal)
         (unless (bolp)
@@ -185,7 +184,7 @@ Note that the extra silliness only kicks in when `thinks-from' is set to
                       (substring thinks-bubbles n (1+ n))
                       "\n")))
       (when extra-silly
-        (setf (point) (point-max))
+        (goto-char (point-max))
         (unless (bolp)
           (insert "\n"))
         (insert " o\n/|\\\n |\n/ \\\n"))
@@ -213,10 +212,10 @@ the text to be filled for you."
   (let ((text (buffer-substring start end)))
     (save-excursion
       (delete-region start end)
-      (setf (point) start)
+      (goto-char start)
       (insert (cl-flet ((bolp-string (n)
                           (save-excursion
-                            (setf (point) n)
+                            (goto-char n)
                             (if (bolp) "" "\n"))))
                 (concat (bolp-string start)
                         (thinks-bubble-wrap text current-prefix-arg)
