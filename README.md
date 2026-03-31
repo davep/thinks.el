@@ -8,8 +8,7 @@ see in cartoons. It allows you to
 . o O ( insert text that looks like this )
 ```
 
-into a buffer. This could possibly be handy for use in email and usenet
-postings.
+into a buffer.
 
 Note that the code can handle multiple lines
 
@@ -52,7 +51,8 @@ taking into account the value of `fill-column` minus the space required for
 the bubble. Prefix a call to any of the functions with <kbd>C-u</kbd> to
 turn off this behaviour.
 
-The latest thinks.el is always available from:
+The latest `thinks.el` is always available from:
 
 https://github.com/davep/thinks.el
 
+[//]: # (README.md ends here)
