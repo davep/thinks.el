@@ -1,4 +1,4 @@
-;;; thinks.el --- Insert text in a think bubble.
+;;; thinks.el --- Insert text in a think bubble
 ;; Copyright 2000-2017 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
